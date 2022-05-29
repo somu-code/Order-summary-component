@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+:root {
+  /* Primary */
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  /* Neutral */
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+body {
+  font-family: "Red Hat Display";
+  font-weight: 500;
+  font-size: 16px;
+  background-color: var(--Pale-blue);
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 -150px;
+}
+.main-container {
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+}
+.page-container {
+  max-width: 450px;
+  background-color: white;
+  border-radius: 20px;
+}
+.page-image img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.page-content {
+  text-align: center;
+  padding: 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.heading {
+  font-weight: 900;
+}
+.paragraph {
+  color: var(--Desaturated-blue);
+}
+.payment-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(225, 100%, 94%, 0.4);
+  padding: 20px 20px;
+  border-radius: 10px;
+  align-items: center;
+}
+.plan {
+  display: flex;
+  gap: 20px;
+}
+.plan-duration {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.plan-cost {
+  color: var(--Desaturated-blue);
+}
+.payment-button {
+  background-color: var(--Bright-blue);
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  color: var(--Very-pale-blue);
+  box-shadow: 0px 10px 20px hsl(245, 75%, 52%, 0.5);
+}
+.payment-cancel {
+  font-weight: 700;
+  color: var(--Desaturated-blue);
+  z-index: 100;
+}
+.plan-change a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+  cursor: pointer;
+}
+.payment-button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.payment-cancel span:hover {
+  color: var(--Dark-blue);
+  cursor: pointer;
+}
+/* Wdith 380px */
+@media (max-width: 380px) {
+  .main-container {
+    margin: 0 auto;
+  }
+  .page-image img {
+    width: 100%;
+  }
+  .page-container {
+    max-width: 320px;
+  }
+  .heading {
+    font-size: 22px;
+  }
+  .payment-container {
+    padding: 12px;
+  }
+  .page-content {
+    padding: 21px;
+    gap: 25px;
+  }
+}
