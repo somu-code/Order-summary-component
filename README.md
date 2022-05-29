@@ -26,6 +26,7 @@ Users should be able to:
 
 Desktop View
 ![](./screenshot/desktop-view.png)
+
 Mobile View (width 375px)
 ![](./screenshot/mobile-view.png)
 
